@@ -1,5 +1,5 @@
 const { test, expect } = require("@playwright/test")
-test("Playwright methods for findingelements", async ({ page }) => {
+test("@Web Playwright methods for findingelements", async ({ page }) => {
     await page.goto("https://rahulshettyacademy.com/angularpractice/");
     await page.getByPlaceholder("Password").fill("Arthi@1995");
     await page.getByLabel("Gender").selectOption("Female");

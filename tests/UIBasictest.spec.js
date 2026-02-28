@@ -1,6 +1,6 @@
 const { test, expect } = require("@playwright/test")
 
-test("First Playwright Test", async ({ page }) => {
+test("@Web First Playwright Test", async ({ page }) => {
     await page.goto("https://rahulshettyacademy.com/loginpagePractise/")
     const userName = page.locator("#username")
     const signIn = page.locator("[type='submit']")
@@ -26,7 +26,7 @@ test("First Playwright Test", async ({ page }) => {
 
 }),
 
-    test("Second Playwright Test", async ({ page }) => {
+    test("@Web Second Playwright Test", async ({ page }) => {
         await page.goto("https://rahulshettyacademy.com/loginpagePractise/")
         const userName = page.locator("#username")
         const signIn = page.locator("[type='submit']")
@@ -45,7 +45,7 @@ test("First Playwright Test", async ({ page }) => {
         await signIn.click()
 
     }),
-    test("Third Playwright Test", async ({ page, context }) => {
+    test("@Web Third Playwright Test", async ({ page, context }) => {
         await page.goto("https://rahulshettyacademy.com/loginpagePractise/")
         const documentLink = page.locator("[href*='documents']")
         await expect(documentLink).toHaveAttribute("class", "blinkingText");
