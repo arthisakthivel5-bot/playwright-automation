@@ -1,23 +1,6 @@
 const { test, expect } = require('@playwright/test')
 test("Practice Test Case", async ({ page }) => {
   await page.goto("https://rahulshettyacademy.com/client/#/auth/login");
-  // //Registering new user
-  // await page.locator(".text-reset").click();
-  // await page.locator("#firstName").fill("Sari");
-  // await page.locator("#lastName").fill("Sheddy");
-  // await page.locator("#userEmail").fill("sarisheddy@gmail.com");
-  // await page.locator("#userMobile").fill("9789276159");
-  // await page.locator("#userPassword").fill("Sari@1996");
-  // await page.locator("#confirmPassword").fill("Sari@1996");
-  // await page.locator("[type='checkbox']").check();
-  // //click on Register
-  // await page.locator("#login").click();
-  // //Successfully Register
-  // await expect(page.getByText('Account Created Successfully')).toBeVisible();
-  // //click on login if already existing user
-  // await page.locator(".btn.btn-primary").click();
-  // //entering the user name and password
-  // await expect(page.locator("#userEmail")).toBeVisible();
   await page.locator("#userEmail").fill("sarisheddy@gmail.com");
   await page.locator("#userPassword").fill("Sari@1996");
   await page.locator(".btn.btn-block.login-btn").click();

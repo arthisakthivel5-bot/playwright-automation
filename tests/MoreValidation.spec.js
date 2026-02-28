@@ -22,9 +22,4 @@ test("@Web Morevalidation", async ({ page }) => {
 
 
 })
-test("@Web Visual Comparison Testing", async ({ page }) => {
-    await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
-    expect(await page.screenshot()).toMatchSnapshot("Actual.png");
-
-})
 

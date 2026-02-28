@@ -39,7 +39,7 @@ async function ReadExcel(worksheet,searchText) {
 
 
 
-test("Upload & Download Excel",async ({page})=> {
+test(" @Web Upload & Download Excel",async ({page})=> {
 
 const originalValue = "Kivi"
 const updatedValue = "Kite"
