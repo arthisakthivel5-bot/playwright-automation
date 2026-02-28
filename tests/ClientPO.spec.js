@@ -1,7 +1,7 @@
 const { test, expect } = require("@playwright/test")
 const { POManager } = require("../pageObject/POManager")
 const testdata = require("../testdata/ClientPO.json")
-const {customtest} = require("../testdata/test-base")
+const { customtest } = require("../testdata/test-base")
 
 for (const data of testdata) {
     test(`@Web User can place an order and verify it in order history for ${data.productName}`, async ({ page }) => {
@@ -49,7 +49,7 @@ for (const data of testdata) {
 
     });
 }
-customtest(`User can place an order and verify it in order history`, async ({ page,testDataforOrder}) => {
+customtest(`User can place an order and verify it in order history`, async ({ page, testDataforOrder }) => {
 
     const pomanager = new POManager(page)
     const loginPage = pomanager.getLoginPage();
