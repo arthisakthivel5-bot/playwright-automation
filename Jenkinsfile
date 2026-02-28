@@ -1,14 +1,13 @@
 pipeline {
     agent any
 
-    parameters {
-        choice(
-            name: 'Script',
-            choices: ['Regression', 'WebTests', 'APITests'],
-            description: 'Select test suite'
-        )
-    }
-
+parameters {
+    choice(
+        name: 'TAG',
+        choices: ['@Regression', '@Web', '@API'],
+        description: 'Select test suite'
+    )
+}
     stages {
 
         stage('Install Dependencies') {
