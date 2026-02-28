@@ -1,11 +1,21 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs "NodeJS"
+    parameters {
+        string(
+            name: 'TAG',
+            defaultValue: '@Regression',
+            description: 'Run tests by tag'
+        )
     }
 
     stages {
+
+        stage('Checkout Code') {
+            steps {
+                git 'https://github.com/arthisakthivel5-bot/playwright-automation.git'
+            }
+        }
 
         stage('Install Dependencies') {
             steps {
@@ -21,7 +31,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh 'npx playwright test'
+                sh "npx playwright test --grep ${params.TAG}"
             }
         }
 
