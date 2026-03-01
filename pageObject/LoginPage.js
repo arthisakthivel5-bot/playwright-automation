@@ -10,7 +10,7 @@ class LoginPage {
 
     async gotoLoginpage() {
 
-        await this.page.goto("https://rahulshettyacademy.com/client/#/auth/login")
+        await this.page.goto(process.env.BASE_URL)
     }
 
     async Login(email, pwd) {
