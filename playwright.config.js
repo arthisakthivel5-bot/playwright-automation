@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
+require('dotenv').config();
 /**
  * @see https://playwright.dev/docs/test-configuration
  */
@@ -14,6 +15,7 @@ const config = defineConfig({
 
     name: "Chrome",
     use: {
+      baseURL: process.env.BASE_URL,
       browserName: "chromium",
       channel: 'chrome',
       headless: true,
@@ -36,7 +38,7 @@ const config = defineConfig({
     }
 
   }
-]
+  ]
 
 
 });
