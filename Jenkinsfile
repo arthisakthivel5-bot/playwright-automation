@@ -28,11 +28,12 @@ pipeline {
                 sh "npx playwright test --grep ${params.TAG}"
             }
         }
+    }
 
-        post {
+    post {
         always {
             publishHTML([
-                allowMissing: false,
+                allowMissing: true,
                 alwaysLinkToLastBuild: true,
                 keepAll: true,
                 reportDir: 'playwright-report',
@@ -40,6 +41,5 @@ pipeline {
                 reportName: 'Playwright HTML Report'
             ])
         }
-    }
     }
 }
