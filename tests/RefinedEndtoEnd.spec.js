@@ -58,3 +58,4 @@ test("Refined EndtoEnd", async ({ page }) => {
   await expect(page.locator(".title")).toHaveText(productName);
   await expect(page.locator(".text").first()).toHaveText(email)
 });
+
